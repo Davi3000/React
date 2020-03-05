@@ -18,13 +18,17 @@ class App extends Component {
       });
   }
 
+  inserirProjeto= projeto => this.setState({lista: [...this.state.lista, projeto]})
+
+  
+
   render() {
     return (
       <>
         <div className="ui inverted fixed huge menu">
           <div className="ui container">
             <a href="index.html" className="item">CraudioFunding</a>
-            <ModalNovoProjeto />
+            <ModalNovoProjeto inserirProjeto={this.inserirProjeto} />
             <div className="ui icon input right menu">
               <input type="text" placeholder="procurar projeto..." />
               <i aria-hidden="true" className="search icon"></i>
