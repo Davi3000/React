@@ -7,7 +7,16 @@ class App extends Component {
 
   constructor() {
     super();
-    this.state = { lista: [] };
+    this.state = { lista: [
+      {nome: "Projeto 1",
+      usuario: "Joao Carlos",
+      likes: 2
+    }
+    ] };
+  }
+
+  adicionarProjeto(projeto){
+    this.setState({lista:[...this.state.lista, projeto]})
   }
 
   componentDidMount() {
@@ -18,17 +27,13 @@ class App extends Component {
       });
   }
 
-  inserirProjeto= projeto => this.setState({lista: [...this.state.lista, projeto]})
-
-  
-
   render() {
     return (
       <>
         <div className="ui inverted fixed huge menu">
           <div className="ui container">
             <a href="index.html" className="item">CraudioFunding</a>
-            <ModalNovoProjeto inserirProjeto={this.inserirProjeto} />
+            <ModalNovoProjeto adicionarProjeto={this.adicionarProjeto.bind(this)} />
             <div className="ui icon input right menu">
               <input type="text" placeholder="procurar projeto..." />
               <i aria-hidden="true" className="search icon"></i>

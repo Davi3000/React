@@ -25,7 +25,7 @@ class CardProjetos extends Component {
         return (
             <div className="column">
                 <div className="ui card centered">
-                    <div className="image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdSgP05S7hMyxXLBpAVofkCCu8m3_5FjgGenJXdYXL2qYsjr7NQ&s" alt="" /></div>
+                    <div className="image"><img src="https://avatars0.githubusercontent.com/u/5585727?s=460&v=4" alt="" /></div>
                     <div className="content">
                         <img src="https://randomuser.me/api/portraits/women/90.jpg" className="ui right floated avatar image" alt="" />
                         <div className="header">{this.props.nome}</div>
